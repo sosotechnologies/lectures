@@ -1,5 +1,6 @@
 resource "aws_security_group" "sosotech-sec-grp" {
     name = "DevOps instances SG"
+    vpc_id = aws_vpc.soso_vpc.id
 
     ingress {
         description      = "For HTTPS access"
